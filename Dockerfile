@@ -6,15 +6,15 @@ WORKDIR /app
 
 # Copia config y código fuente al contenedor
 COPY --chown=default:default . .git .mvn ./
-# COPY jconn4d-16.0.jar ./
+COPY jconn4d-16.0.jar ./
 
-# # Instalamos jconn4d en el repo local de Maven
-# RUN mvn install:install-file \
-#   -Dfile=jconn4d-16.0.jar \
-#   -DgroupId=sybase \
-#   -DartifactId=jconn4d \
-#   -Dversion=4_RELEASE \
-#   -Dpackaging=jar
+# Instalamos jconn4d en el repo local de Maven
+RUN mvn install:install-file \
+  -Dfile=jconn4d-16.0.jar \
+  -DgroupId=sybase \
+  -DartifactId=jconn4d \
+  -Dversion=4_RELEASE \
+  -Dpackaging=jar
 
 # Empaqueta la aplicación
 RUN mvn clean package -DskipTests
@@ -26,7 +26,7 @@ FROM ubi9/openjdk-17:1.22
 WORKDIR /app
 
 # Copia el archivo JAR construido en la etapa anterior al contenedor
-COPY --from=build-stage /app/target/java-sprint-boot-template-0.0.1-SNAPSHOT.jar ./app.jar
+COPY --from=build-stage /app/target/integral-ddjj-validation-service-0.0.1-SNAPSHOT.jar ./app.jar
 
 # # Copiamos el driver
 # COPY jconn4d-16.0.jar ./lib/jconn4d-16.0.jar

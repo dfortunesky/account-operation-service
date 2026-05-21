@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="ar.com.swissmedical.integral.ddjj.adapter.mybatis.mappers.DdjjValidationMapper">
+
+    <resultMap id="DdjjValidationResultMap"
+               type="ar.com.swissmedical.integral.ddjj.adapter.mybatis.model.DdjjValidationModel">
+        <result column="ddjj"      property="ddjj"/>
+        <result column="auditoria" property="auditoria"/>
+        <result column="operador"  property="operador"/>
+        <result column="insertado" property="insertado"/>
+    </resultMap>
+
+    <select id="getDdjjAuditoria"
+            parameterType="ar.com.swissmedical.integral.ddjj.adapter.mybatis.model.DdjjValidationModel"
+            resultMap="DdjjValidationResultMap">
+        execute integral.dbo.get_ddjj_auditoria
+            @id_compania       = #{idCompania, jdbcType=SMALLINT},
+            @id_cuenta         = #{idCuenta, jdbcType=INTEGER},
+            @id_modo_operacion = #{idMop, jdbcType=CHAR}
+    </select>
+
+</mapper>
