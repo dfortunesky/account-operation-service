@@ -1,0 +1,4 @@
+argocdDeployer(
+    ARGOCD_APP_NAME: 'account-operation-service',
+    ARGOCD_PROJECT_NAME: 'integral'
+)
