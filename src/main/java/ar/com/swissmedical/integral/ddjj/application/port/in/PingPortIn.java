@@ -1,9 +1,9 @@
 package ar.com.swissmedical.integral.ddjj.application.port.in;
 
-import java.util.Map;
+import ar.com.swissmedical.integral.ddjj.application.dto.response.PingResponseDto;
 
 public interface PingPortIn {
 
-    Map<String, String> ping();
+    PingResponseDto ping();
 
 }

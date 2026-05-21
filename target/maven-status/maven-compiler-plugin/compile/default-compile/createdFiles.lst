@@ -1,5 +1,5 @@
 ar\com\swissmedical\integral\ddjj\application\port\in\PingPortIn.class
 ar\com\swissmedical\integral\ddjj\application\usecase\PingUseCase.class
 ar\com\swissmedical\integral\ddjj\IntegralDdjjValidationServiceApplication.class
-ar\com\swissmedical\integral\ddjj\application\port\out\PingRepositoryPortOut.class
 ar\com\swissmedical\integral\ddjj\adapter\controller\PingControllerAdapter.class
+ar\com\swissmedical\integral\ddjj\application\port\out\PingRepositoryPortOut.class
