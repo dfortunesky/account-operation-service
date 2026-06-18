@@ -1,17 +1,21 @@
 spring:
+  config:
+    import: optional:file:.env[.properties]   # ← lleer el archivo .env.properties si existe, pero no lanzar error si no existe
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
   datasource:
     url: ${DB_URL}
     username: ${DB_USER}
     password: ${DB_PASSWORD}
-    driver-class-name: com.sybase.jdbc4.jdbc.SybDriver
+    driver-class-name: ${DB_DRIVER_CLASS}
     hikari:
       minimum-idle: 2
       maximum-pool-size: 10
       connection-timeout: 30000
       connection-test-query: select 1
-
-mybatis:
-  mapper-locations: classpath:mybatis/mappers/*.xml
 
 management:
   endpoints:

@@ -22,6 +22,10 @@ public class DdjjValidationMybatisAdapter implements DdjjValidationRepositoryPor
 
         DdjjValidationModel result = mapper.getDdjjAuditoria(params);
 
+        if (result == null) {
+            return new DdjjValidationResponseDto(false, false);
+        }
+
         return new DdjjValidationResponseDto(
                 "S".equals(result.getDdjj()),
                 "S".equals(result.getAuditoria())

@@ -1,31 +1,11 @@
 spring:
   web: 
     cors:
-      allowed-origins: http://localhost:3000
+      allowed-origins: "*"
       allowed-methods: GET,POST,PUT,DELETE,OPTIONS
-      allowed-headers: Authorization,Content-Type
-      allow-credentials: true
-  devtools: 
-    restart: 
-      enabled: true
-    livereload:
-      enabled: true
+      allowed-headers: Authorization,Content-Type,X-Security
   application:
-    name: core-template
-  cloud:
-    discovery:
-      client:
-        composite-indicator:
-          enabled: false
-
-  data:
-    jpa:
-      open-in-view: false
-      repositories:
-        enabled: false
-
-  jpa:
-    open-in-view: false
+    name: integral-ddjj-validation-service
 
   datasource:
     url: ${DB_URL}
@@ -49,7 +29,7 @@ spring:
 management:
   metrics:
     tags:
-      application: core-template
+      application: integral-ddjj-validation-service
   endpoint:
     health: 
       show-details: always
@@ -71,3 +51,7 @@ springdoc:
 logging:
   pattern:
     level: "%5p [trace=%X{traceId}]"
+
+app:
+  security:
+    authorized-users: ${SECURITY_AUTHORIZED_USERS}

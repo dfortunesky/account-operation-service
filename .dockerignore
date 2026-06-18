@@ -1,1 +1,22 @@
 Dockerfile
+
+# Credenciales y archivos locales
+.env
+*.env
+
+# Git
+.git
+.gitignore
+
+# IDE
+.idea
+.vscode
+*.iml
+*.iws
+*.ipr
+
+# Maven build output (se genera dentro del container)
+target/
+
+# Logs
+*.log

@@ -4,8 +4,11 @@ C:\Users\Damian_Fortunesky\Desktop\JAVA\account-operation-service\src\main\java\
 C:\Users\Damian_Fortunesky\Desktop\JAVA\account-operation-service\src\main\java\ar\com\swissmedical\integral\ddjj\application\port\out\DdjjValidationRepositoryPortOut.java
 C:\Users\Damian_Fortunesky\Desktop\JAVA\account-operation-service\src\main\java\ar\com\swissmedical\integral\ddjj\IntegralDdjjValidationServiceApplication.java
 C:\Users\Damian_Fortunesky\Desktop\JAVA\account-operation-service\src\main\java\ar\com\swissmedical\integral\ddjj\config\MyBatisConfig.java
+C:\Users\Damian_Fortunesky\Desktop\JAVA\account-operation-service\src\main\java\ar\com\swissmedical\integral\ddjj\config\security\XSecurityInterceptor.java
 C:\Users\Damian_Fortunesky\Desktop\JAVA\account-operation-service\src\main\java\ar\com\swissmedical\integral\ddjj\adapter\controller\DdjjValidationControllerAdapter.java
 C:\Users\Damian_Fortunesky\Desktop\JAVA\account-operation-service\src\main\java\ar\com\swissmedical\integral\ddjj\config\exception\GlobalExceptionHandler.java
+C:\Users\Damian_Fortunesky\Desktop\JAVA\account-operation-service\src\main\java\ar\com\swissmedical\integral\ddjj\config\security\SecurityConfig.java
+C:\Users\Damian_Fortunesky\Desktop\JAVA\account-operation-service\src\main\java\ar\com\swissmedical\integral\ddjj\config\security\SecurityProperties.java
 C:\Users\Damian_Fortunesky\Desktop\JAVA\account-operation-service\src\main\java\ar\com\swissmedical\integral\ddjj\application\dto\response\ErrorResponseDto.java
 C:\Users\Damian_Fortunesky\Desktop\JAVA\account-operation-service\src\main\java\ar\com\swissmedical\integral\ddjj\adapter\mybatis\mappers\DdjjValidationMapper.java
 C:\Users\Damian_Fortunesky\Desktop\JAVA\account-operation-service\src\main\java\ar\com\swissmedical\integral\ddjj\application\usecase\DdjjValidationUseCase.java

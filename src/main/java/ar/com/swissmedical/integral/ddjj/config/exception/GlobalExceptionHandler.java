@@ -15,6 +15,15 @@ import java.time.LocalDateTime;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
+    @ExceptionHandler(NumberFormatException.class)
+    public ResponseEntity<ErrorResponseDto> handleNumberFormat(NumberFormatException ex) {
+        ErrorResponseDto error = new ErrorResponseDto(
+                "Parámetro con formato inválido: se esperaba un número",
+                LocalDateTime.now()
+        );
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
+    }
+
     @ExceptionHandler(MissingServletRequestParameterException.class)
     public ResponseEntity<ErrorResponseDto> handleMissingParam(MissingServletRequestParameterException ex) {
         ErrorResponseDto error = new ErrorResponseDto(
